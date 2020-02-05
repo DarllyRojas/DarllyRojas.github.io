@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   background: palegreen;
   margin: 0;
@@ -42,4 +43,50 @@ p {
 #image-content img {
 	display:block;
 	margin:auto;
+=======
+body {
+  background: palegreen;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', Arial;
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 600;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 20px;
+  width: 100%;
+}
+
+h6 {
+  color: gray;
+  font-size: 15px;
+  text-align: center;
+}
+
+p {
+  font-size: 25px;
+  line-height: 48px;
+}
+
+#image-content img {
+	display:block;
+	margin:auto;
+>>>>>>> 5dcdc1addb836405d209342467c752f2a28781b3
 }
