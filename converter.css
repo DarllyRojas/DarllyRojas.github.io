@@ -10,8 +10,9 @@
 
 
 body {
-   /*background: linear-gradient(-45deg, #04B431, green);*/
-  background: url("Rule.jpg") 80% 0 repeat-y fixed;
+  /*background: url("Rule.jpg") 80% 0 no-repeat center fixed;*/
+  background: url(Rule.jpg) 60% 0 repeat-y fixed;
+  background-position:center;
   background-color: #cccccc;
   margin: 10%;
   padding: 0;
@@ -35,6 +36,7 @@ h2 {
   color: #280000;
   font-size: 30px;
   font-weight: 600;
+  text-shadow: 2px 2px #04B431;
   margin-top: 20px;
   text-align: center;
   width: 90%;
@@ -42,9 +44,12 @@ h2 {
 
 p {
   color: black;
-  font-size: 25px;
+  font-size: 28px;
+  font-weight: 400;
+  text-shadow: 0 0 3px #04B432;
   line-height: 48px;
   text-align: center;
+
 
 =======
 * {
@@ -60,6 +65,3 @@ hr {
   border-style: inset;
   border-width: 2px;
 }
-
-
-
