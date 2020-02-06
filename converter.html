@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Darlly Rojas' Unit Converter!</title>
+  <link href="converter.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="converter.js"></script>
+</head>
+
+<html>
+
+<body>
+<!––</form> ––>
+  <h1> Welcome to my Unit converter! </h1>
+  <h2> by Darlly Rojas </h2>
+
+
+<form>
+  <p>
+    In this converter you can converter distance units
+  </p>
+</form>
+
+<p> Enter a value <input id="inputValue" class="selectbar" type="number">
+
+ </p>
+
+
+<p> Select your Input units
+	  <select class="selectbar" id="InputUnits" name="select"> <!––Barrita de seleccion ––>
+	    <option value=""selected> </option>
+		<option value="Centimeters">Centimeters</option>
+		<option value="Inches">Inches</option>
+		<option value="Feet">Feet</option>
+		<option value="Yards">Yards</option>
+		<option value="Meters">Meters</option>
+		<option value="Kilometers">Kilometers</option>
+		<option value="Miles">Miles</option>
+	  </select>
+  </p>
+
+<p> Select your Output units
+	  <select class="selectbar" id="OutputUnits" name="select"> <!––Barrita de seleccion ––>
+        <option value=""selected> </option>
+		<option value="Centimeters">Centimeters</option>
+		<option value="Inches">Inches</option>
+		<option value="Feet">Feet</option>
+		<option value="Yards">Yards</option>
+		<option value="Meters">Meters</option>
+		<option value="Kilometers">Kilometers</option>
+		<option value="Miles">Miles</option>
+	  </select>
+  </p>
+
+
+<!--<input id="Value" type="number"  maxlength="20"  name="Value">
+
+<!––Orden to JavaScript ––>
+ Button -->
+<p>
+    <input class="buttons" type="button" value="Convert!" onClick="UnitConverter();"/> <!-- Entidad que asigna el resultado del boton -->
+</p>
+
+<div id="result"> </div>
+
+
+</body>
+</html>
