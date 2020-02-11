@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Darlly Rojas' Average Velocity using Manning formula!</title>
+  <link href="Manning.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="Manning.js"></script>
+</head>
+
+<html>
+
+
+
+<body>
+<!––</form> ––>
+
+  <h1> Average Velocity Calculator </h1>
+<h2>Assigment 6, 2/11/2020  </h2>
+<hr>
+ <h2>  </h2>
+  <h2> by Darlly Rojas </h2>
+
+<hr>
+<form>
+  <p>
+    <br />
+    In this web you can estimate the average velocity in an open channel
+    or a pipe with an open water surface using Manning Equation
+  </p>
+</form>
+
+<div id = "image-content">
+ <img src="Manning.jfif" alt="Mann" style="width:15%">
+</div>
+
+<p> Select an Unit Sistem <select class="selectbar" id="kValue"  name="select"></p>
+  <option value= "" selected> </option>
+  <option value= "1" > SI </option>
+  <option value= "1.49"> English Units </option>
+</select> </p>
+<!–– k = 1 for SI and k=1.49––>
+
+<h3> Now we need to calculate the hydraulic radius </h3>
+<p> Enter a Area value <input id="AreaValue" class="selectbar" type="number"></p>
+<P> Units <select class= "selectbar" id="AreaUnit" name="select">
+  <option value= "" selected> </option>
+  <option value= "Meter" > m^2 </option>
+  <option value= "Feet"> ft^2 </option>
+</select> </p>
+
+
+<p> Enter a Perimeter value <input id="PerValue" class="selectbar" type="number"></p>
+<P> Units <select class= "selectbar" id="PerUnit" name="select">
+  <option value= "" selected> </option>
+  <option value= "Meter" > m </option>
+  <option value= "Feet"> ft </option>
+</select> </p>
+
+
+<h3> Now Enter the other variables  </h3>
+<p> Enter a Manning Coefficient of roughness (n) <input id="inputValue" class="selectbar" type="number"></p>
+<!-- <p> Enter a hydraulic radius value (Rh) <input id="inputValue" class="selectbar" type="number"></p> -->
+<!-- Porque arriba ingresa area y perimetro -->
+<p> Enter a Slope value (m/m, ft/ft) <input id="inputValue" class="selectbar" type="number"></p>
+
+<!-- <p> Select your Input units
+	  <select class="selectbar" id="InputUnits" name="select"> <!––Barrita de seleccion ––>
+	    <option value=""selected> </option>
+		<option value="Centimeters">Centimeters</option>
+		<option value="Inches">Inches</option>
+	  </select>
+  </p> -->
+
+
+
+<!-- <p> Select your Output units
+	  <select class="selectbar" id="OutputUnits" name="select"> <!––Barrita de seleccion ––>
+        <option value=""selected> </option>
+		<option value="Centimeters">Centimeters</option>
+		<option value="Inches">Inches</option>
+		<option value="Feet">Feet</option>
+		<option value="Yards">Yards</option>
+		<option value="Meters">Meters</option>
+		<option value="Kilometers">Kilometers</option>
+		<option value="Miles">Miles</option>
+	  </select>
+  </p> -->
+
+
+<!--<input id="Value" type="number"  maxlength="20"  name="Value">
+
+<!––Orden to JavaScript ––>
+ Button -->
+<p>
+    <input class="buttons" type="button" value="Convert!" onClick="UnitConverter();"/> <!-- Entidad que asigna el resultado del boton -->
+</p>
+
+<div id="result"> </div>
+
+
+</body>
+</html>
