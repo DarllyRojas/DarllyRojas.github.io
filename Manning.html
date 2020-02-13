@@ -12,7 +12,6 @@
 
 
 <body>
-<!––</form> ––>
 
   <h1> Average Velocity Calculator </h1>
 <h2>Assigment 6, 2/11/2020  </h2>
@@ -30,39 +29,75 @@
 </form>
 
 <div id = "image-content">
- <img src="Manning.jfif" alt="Mann" style="width:15%">
+ <img src="Manning.jfif" alt="Mann" style="width:25%" >
 </div>
 
-<p> Select an Unit Sistem <select class="selectbar" id="kValue"  name="select"></p>
-  <option value= "" selected> </option>
-  <option value= "1" > SI </option>
-  <option value= "1.49"> English Units </option>
-</select> </p>
-<!–– k = 1 for SI and k=1.49––>
+ <ul>
+  <li>V = Velocity  </li>
+  <li>A = Flow Area </li>
+  <li> n = Manning’s Roughness Coefficient </li>
+  <li>R = Hydraulic Radius </li>
+  <li>S = Channel Slope </li>
 
-<h3> Now we need to calculate the hydraulic radius </h3>
-<p> Enter a Area value <input id="AreaValue" class="selectbar" type="number"></p>
-<P> Units <select class= "selectbar" id="AreaUnit" name="select">
-  <option value= "" selected> </option>
-  <option value= "Meter" > m^2 </option>
-  <option value= "Feet"> ft^2 </option>
-</select> </p>
+</ul>
 
-
-<p> Enter a Perimeter value <input id="PerValue" class="selectbar" type="number"></p>
-<P> Units <select class= "selectbar" id="PerUnit" name="select">
-  <option value= "" selected> </option>
-  <option value= "Meter" > m </option>
-  <option value= "Feet"> ft </option>
-</select> </p>
+<!--<p> Select an Unit Sistem <select class="selectbar" id="kValue"  name="select"></p>-->
+  <!--<option value= "" selected> </option>-->
+  <!--<option value= "1" > SI </option>-->
+  <!--<option value= "1.49"> English Units </option>-->
+<!--</select> </p>-->
+<!--<!–– k = 1 for SI and k=1.49––>-->
 
 
-<h3> Now Enter the other variables  </h3>
-<p> Enter a Manning Coefficient of roughness (n) <input id="inputValue" class="selectbar" type="number"></p>
+<p>Please Select an Unit Sistem :</p>
+
+    <!--<input type="radio" id="K"-->
+     <!--name="Ks" value="1">-->
+    <!--<label for="K">SI</label>-->
+    <!--<input type="radio" id="K"-->
+     <!--name="K" value="1.49">-->
+    <!--<label for="K">English Units</label>-->
+    <!--</div>-->
+
+  <!--<div>-->
+    <!--<input type="radio" name="K" value="1.49" id="K" onclick="func()">English Units-->
+    <!--<input type="radio" name="KS" value="1" id="KSI" onclick="func()">SI Units-->
+  <!--</div>-->
+
+  <div><p>
+    <input type="radio" name="K" value="1.49" id="K" >English Units
+    <input type="radio" name="KS" value="1" id="KSI" >SI Units
+  </p>  </div>
+
+
+
+
+<!--<h3> Now we need to calculate the hydraulic radius </h3>-->
+<p> Enter a Area value (m^2, ft^2) <input id="AreaValue" class="selectbar" type="number"></p>
+<!--<P> Units <select class= "selectbar" id="AreaUnit" name="select">-->
+  <!--<option value= "" selected> </option>-->
+  <!--<option value= "Meter" > m^2 </option>-->
+  <!--<option value= "Feet"> ft^2 </option>-->
+<!--</select> </p>-->
+
+
+<p> Enter a Perimeter value (m, ft) <input id="PerValue" class="selectbar" type="number"></p>
+<!--<P> Units <select class= "selectbar" id="PerUnit" name="select">-->
+  <!--<option value= "" selected> </option>-->
+  <!--<option value= "Meter" > m </option>-->
+  <!--<option value= "Feet"> ft </option>-->
+<!--</select> </p>-->
+
+
+<!--<h3> Now Enter the other variables  </h3>-->
+<p> Enter a Manning Coefficient of roughness (n) <input id="n" class="selectbar" type="number"></p>
 <!-- <p> Enter a hydraulic radius value (Rh) <input id="inputValue" class="selectbar" type="number"></p> -->
 <!-- Porque arriba ingresa area y perimetro -->
-<p> Enter a Slope value (m/m, ft/ft) <input id="inputValue" class="selectbar" type="number"></p>
+<p> Enter a Slope value (m/m, ft/ft) <input id="slope" class="selectbar" type="number"></p>
 
+<h4> Manning’s Equation can be rearranged to solve for slope (S), which is termed the friction slope,
+  (Sf).  The friction slope is part of the gradually varied flow used to solve for the water surface profile through
+  a culvert </h4>
 <!-- <p> Select your Input units
 	  <select class="selectbar" id="InputUnits" name="select"> <!––Barrita de seleccion ––>
 	    <option value=""selected> </option>
@@ -91,11 +126,16 @@
 
 <!––Orden to JavaScript ––>
  Button -->
-<p>
-    <input class="buttons" type="button" value="Convert!" onClick="UnitConverter();"/> <!-- Entidad que asigna el resultado del boton -->
-</p>
+  <div>
+   <p><input class="buttons" type="button" value="Submit!" onClick="Manning();"/></p>
+  </div>
+<!--<p>-->
+    <!--<input class="buttons" type="button" value="Convert!" onClick="men();"/> &lt;!&ndash; Entidad que asigna el resultado del boton &ndash;&gt;-->
+<!--</p>-->
+
 
 <div id="result"> </div>
+
 
 
 </body>

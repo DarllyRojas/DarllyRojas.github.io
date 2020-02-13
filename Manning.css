@@ -1,0 +1,83 @@
+<<<<<<< HEAD
+* {
+  box-sizing: border-box;
+
+}
+
+li {
+  color: white;
+  text-shadow: 0.5px 0.5px blue;
+
+}
+
+
+
+
+body {
+  /*background: url("Rule.jpg") 80% 0 no-repeat center fixed;*/
+  background: url(river.jpeg) 60% 0 repeat-y fixed;
+  background-position:center;
+  background-color: #cccccc;
+  margin: 10%;
+  padding: 0;
+  font-family: 'Raleway', Arial;
+  /*border: 2px solid black;
+  box-shadow: 10px 5px;
+  box-sizing: border-box*/
+}
+
+h1 {
+  color: black;
+  text-shadow: 2px 2px #04B431;
+  font-size: 50px;
+  font-weight: 300;
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+
+}
+
+h2 {
+  color: #280000;
+  font-size: 30px;
+  text-shadow: white;
+  font-weight: 600;
+  text-shadow: 2px 2px #04B431;
+  margin-top: 20px;
+  text-align: center;
+  width: 90%;
+}
+
+h4 {
+  text-align: left;
+  padding: 10px;
+  color: black;
+
+}
+
+p {
+  color: white;
+  text-shadow: 0.5px 0.5px blue;
+  font-size: 22px;
+  font-weight: 400;
+  text-shadow: white;
+  line-height: 30px;
+  /*text-align: center;*/
+
+
+=======
+* {
+  box-sizing: border-box;
+
+}
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 2px;
+}
+
+
