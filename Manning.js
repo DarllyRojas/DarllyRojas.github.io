@@ -61,6 +61,7 @@ function Manning() {
 r=Math.pow(Area/Per,2/3);
 s=Math.pow(slope,1/2);
 v=(k/n)*r*s;
+//intentar si puedo rellamar la variable y modificarla
 //Print result
     resultDIV.innerHTML="<p>"+ "Computed flow velocity is " + v + c +"</p>"
 
