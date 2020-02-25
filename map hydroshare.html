@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Darlly Rojas' Leaflet Map!</title>
+  <link href="map.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="map.js"></script>
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+</head>
+
+<html>
+
+
+
+<body>
+<!––</form> ––>
+
+  <h1> Important Cities in Colombia - States visited  </h1>
+<h2>  </h2>
+<hr>
+ <h2>  </h2>
+
+<h2>Darlly Rojas, CE EN 514, Assigment 8, 2/25/2020  </h2>
+
+<div id="mapid"></div>
+
+
+<!--'https://geoserver.hydroshare.org/geoserver/HS-59aff167433e49a0b5aa1e818aff5f3e/wms?'-->
+<script>
+<!--Basemap-->
+var mymap = L.map('mapid').setView([21.26, -95.954562], 3);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 32,
+    id: 'mapbox/streets-v11',
+    accessToken: 'pk.eyJ1IjoiYWJoaXNoZWthbWFsMTgiLCJhIjoiY2s1eTVxNGExMmQ5MDNubjExaWY5MjdvbSJ9.3nmdjWZmUCDNyRdlPo5gbg',
+}).addTo(mymap);
+
+
+
+<!--Layer with cities-->
+
+var citiesLayer = L.tileLayer.wms('https://geoserver.hydroshare.org/geoserver/HS-59aff167433e49a0b5aa1e818aff5f3e/wms', {
+    layers: 'cities',
+    format: 'image/png',// WMS image format (use 'image/png' for layers with transparency. No va punto asi lo diga la documentacion
+    transparent: true,
+}).addTo(mymap);
+
+var States = L.tileLayer.wms('https://geoserver.hydroshare.org/geoserver/HS-2e6a220b699544f18b58aa9904743cae/wms', {
+    layers: 'Visited_States',
+    format: 'image/png',// WMS image format (use 'image/png' for layers with transparency. No va punto asi lo diga la documentacion
+    transparent: true,
+}).addTo(mymap);
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
