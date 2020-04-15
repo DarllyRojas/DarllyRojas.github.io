@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Darlly Rojas' Leaflet Map!</title>
+  <link href="map.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="map.js"></script>
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+</head>
+
+<html>
+
+
+
+<body>
+<!––</form> ––>
+
+  <h1> Welcome to my Map with Leaflet! </h1>
+<h2>  </h2>
+<hr>
+ <h2>  </h2>
+
+<h2>Darlly Rojas, CE EN 514, Assigment 7, 2/20/2020  </h2>
+
+<div id="mapid"></div>
+
+<form>
+  <p>
+    <br />
+    In this web page you can see my hometown Yopal in Colombia
+  </p>
+</form>
+
+
+<script>
+    var mymap = L.map('mapid').setView([5.333735, -72.394606], 14);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 32,
+    id: 'mapbox/streets-v11',
+    accessToken: 'pk.eyJ1IjoiYWJoaXNoZWthbWFsMTgiLCJhIjoiY2s1eTVxNGExMmQ5MDNubjExaWY5MjdvbSJ9.3nmdjWZmUCDNyRdlPo5gbg'
+}).addTo(mymap);
+
+var blueIcon = L.icon({
+    iconUrl: 'icon.jpg',
+
+    iconSize:     [30, 40], // size of the icon
+    iconAnchor:   [15, 40], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
+});
+
+    var marker = L.marker([5.354327, -72.402025], {icon: blueIcon}).addTo(mymap).bindPopup('<h2>Iguana Park<br> Cravo Sur river</h2>' +
+     '<p>Iguana Park was created to protect iguana and animals from extinction, however it is used by residents for drug use. </p>'+
+    '<img src = "Iguana.jpg" width="300" height="200">');
+
+     var marker = L.marker([5.318445, -72.396556], {icon: blueIcon}).addTo(mymap).bindPopup('<h2>My home<br> - El Fical -</h2>' +
+     '<p>In this house I lived since my brother broke a leg in school.  </p>'+
+    '<img src = "Home.jpg" width="300" height="200">');
+
+    var marker = L.marker([5.321298, -72.397461], {icon: blueIcon}).addTo(mymap).bindPopup('<h2>My School</h2>' +
+     '<p>In this school I did my high school. </p>'+
+    '<img src = "School.jpg" width="300" height="200">');
+
+    var marker = L.marker([5.319746, -72.394321], {icon: blueIcon}).addTo(mymap).bindPopup('<h2>My Church<br> Iglesia Nuestra Señora Del Milagro</h2>' +
+     '<p>It was originally a paddock. </p>'+
+    '<img src = "Church.jpg" width="300" height="200">');
+
+    var marker = L.marker([5.318583, -72.393137], {icon: blueIcon}).addTo(mymap).bindPopup('<h2> Stadium <br> Santiago De Las Atalayas De Yopal</h2>' +
+     '<p>It is not the headquarters of professional teams, but it stands out for having received the Pumas de Casanare club for a year in the First B of Colombia. It used to be called Pierre Lora Muñoz. (Wikipedia) </p>'+
+    '<img src = "Stadium.jpg" width="300" height="200">');
+
+
+    var marker = L.marker([5.333735, -72.394606]).addTo(mymap).bindPopup('<h2>El Yopal</h2>' +
+        '"El Yopal is the capital of Casanare.<br>' +
+        'Its most famous feature is that despite having surrounding water sources, 12 years ago has no aqueduct.<br>' +
+        'Yopal derives its name from a timber tree, typical of the region, whose name is "yopo". In fact, on the site where the city of Yopal is currently located there was a forest of these trees or a yopal (yopos forest)." (Wikipedia).<br><br>');
+
+    var polygon = L.polygon([
+    [5.318450, -72.396583],
+    [5.318459, -72.396528],
+    [5.318450, -72.396493],
+    [5.318336, -72.396554],
+    ]).addTo(mymap);
+
+var circle = L.circle([5.318450, -72.396583], {
+    color: '#006400',
+    fillColor: '#76abdf',
+    fillOpacity: 0.5,
+    radius: 800
+}).addTo(mymap);
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>

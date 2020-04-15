@@ -1,0 +1,71 @@
+<<<<<<< HEAD
+* {
+  box-sizing: border-box;
+
+}
+
+
+
+
+
+
+body {
+  /*background: url("Rule.jpg") 80% 0 no-repeat center fixed; -repeat-y fixed;*/
+  background: url(Yopal.jpg) 100% 0 no-repeat;
+  background-position:center;
+  background-color: #cccccc;
+  margin: 10%;
+  padding: 0;
+  font-family: 'Raleway', Arial;
+  /*border: 2px solid black;
+  box-shadow: 10px 5px;
+  box-sizing: border-box*/
+}
+
+h1 {
+  color: blue;
+  text-shadow: 2px 2px #04B431;
+  font-size: 60px;
+  font-weight: 600;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+h2 {
+  color: blue;
+  /*color: #280000;*/
+  font-size: 30px;
+  font-weight: 600;
+  text-shadow: 2px 2px #04B431;
+  margin-top: 20px;
+  text-align: center;
+  width: 90%;
+}
+
+
+#mapid { height: 600px; }
+
+p {
+  color: blue;
+  font-size: 20px;
+  font-weight: 400;
+  text-shadow: 0 0 3px #04B432;
+  line-height: 30px;
+ /* text-align: center;*/
+
+
+=======
+* {
+  box-sizing: border-box;
+
+}
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 2px;
+}
